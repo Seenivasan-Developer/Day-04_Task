@@ -5,12 +5,31 @@ var StudentName={
     "Gender":"Male",
     "Course":"FSD-MERN"
     }
-    
+//For loop
+    let valuesArray = Object.entries(StudentName);
+    console.log("ITERATE USING FOR LOOP")
+for (let i = 0; i < valuesArray.length; i++) {
+    console.log(valuesArray[i].join(": "));
+}
+//For of
+console.log("ITERATE USING FOR OF LOOP")
+for (let [key, value] of Object.entries(StudentName)) {
+   console.log(key + ": " + value);
+}
+//For Each
+console.log("ITERATE USING FOR EACH LOOP")
+valuesArray.forEach(function(value) {
+   console.log(value.join(": "));
+});
+
+//For In
+console.log("ITERATE USING FOR IN LOOP")
     for(var Stud in StudentName){
     console.log(`${Stud}: ${StudentName[Stud]}`);
     }
     
     //2. Create your own resume data in JSON format:
+    console.log("RESUME JSON FORMAT")
     var MyResume={
        "personalInformation": {
           "name": "SEENIVASAN K B",
